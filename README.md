@@ -28,7 +28,7 @@ Reulting in our final line looking like `tickerVolumes(tickerIndex) = tickerVolu
 
 ###  Yearly Return:
 
-In order to code for **Yearly Return** the use of conditional (IF-THEN) statemnets had to be employed
+In order to code for **Yearly Return** the use of conditional (If-Then) statemnets had to be employed
 ```
 If Cells(i - 1, 1).Value <> ticker And Cells(i, 1) = ticker Then
             tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
@@ -46,9 +46,9 @@ In “human” language we would read the following code something like this:
 >If the cell value in previous row (2nd column) is not the same as current cell value (2nd column), (that means the ticker index has reached a starting point of the new ticker), then capture the value for starting price of a new ticker in a current row (7th column) and store it in a “container” named tickerEndingPrices under label “current” tickerIndex. And similarly for ending prices.
 
 #### For loops
-For loops are responsible for executing the code in a repetitive manner until the condition is met. 
-Incrementing a variable by 1  `tickerIndex = tickerIndex + 1` is  responsible to move to the next ticker.
-By initializing arrays `tickerVolumes(tickerIndex) = 0` we reset the total volume to zero, before entering the loop again. 
+The refacorisation of our VBA code heavily depended on the basic understanding of for loops. As these loops are responsible for executing the code in a repetitive manner, in out case, increasing our tickerIndex variable by 1  `tickerIndex = tickerIndex + 1` i.e. moving up to our next ticker within the array of 12 that was previously created 
+
+By initializing arrays `tickerVolumes(tickerIndex) = 0` we are able to set the intial volume to zero, before entering the loop again. As we will further explore in the coming sections nested for loops as presented in our base code were the source of inefficiencies. 
 
 #### Formatting 
 In order to present our final table in an organized and visually engaging manner, Microsoft Visual Basic Editor allows for both conditional as well as Static formatting as one would normally do within excel itself. 
@@ -92,7 +92,7 @@ dataRowStart = 4
 By applying conditionals we can set the circumsatnce in which the foramtting is applied i.e. in our example above should the cells contents be greater than 0, it is colored in green otherwise it is colored in red.
 
 ### Comparison after refacotring
-Table below shows main diferences between code *before refactoring* and code *after refactoring* and their *run-time*. 
+Table below shows main diferences between code *before refactoring* and code *after refactoring* as well as their *run-time*. 
 
 Code before refactoring (Module 1). |  Code after refactoring (Module 2).
 :------------------------------------------:| :-------------------------------------:
@@ -100,7 +100,7 @@ Code with nested loops(click to enlarge).  | Code without nested loops (click to
 ![code before refactoring](resources/base_code.png) | ![code after refactoring](resources/refactored_code.png)
 The code utlizing nested loops causes back and forth switching within worksheets eating up valuable time. | Code staying within the same loop, gathers all data and stores it in arrays where then a separate for loop the results are populated in the selected worksheet making effecient use of "batch processing' to save time.  
  Execution time of the base code: |  Execution time of the refactored code:
-<img src="resources/2017_base.png" width="1000" height=""> | <img src="resources/VBA_Challenge_2017.png" width="1000" height="">
+<img src="resources/2017_base.png" width="400" height="350"> | <img src="resources/VBA_Challenge_2017.png" width="400" height="350">
 
 <p align="center">
 :heavy_check_mark: The refactored code runs more than 5 times faster (5.33 to be precise).
