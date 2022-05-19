@@ -7,7 +7,7 @@ For this purpose, I used for loops, conditional formatting and statements amongs
 
 I enjoyed coding in VBA immensely, owing to the ease in transfer of basic to advanced repetitive tasks. I was and am able to come back to the original or updated file in order to improve it as per my convenience at any point in time. Since, it is a standalone application - I have not had to further install any libraries / packages or applications to either update current code or run further data analysis, and it has proceeded to integrate effectively with Microsoft applications.
 
-For your reference, within the [VBA_Challenge](VBA_Challenge.xlsm)file you can find the base code (Module 2) and the refactored code. (Module 3)
+For your reference, within the [VBA_Challenge](VBA_Challenge.xlsm) file you can find the base code (Module 2) and the refactored code. (Module 3)
 
 ### Purpose
 The final outcome of this data analysis pertains to Steve determining whether certain green-energy stocks are viable investments for his parents.
@@ -16,7 +16,7 @@ Quite specifically, they are looking to invest in DAQO stocks (Ticker: DQ).
 This company makes silicon wafers for solar panels. Therefore, Steve is performing an overall analysis of green energy stock companies to gauge their performance over 2 years compared to the one's his parents are interested in so that they may make an informed decision.
 
 ## Building the code and Table Outputs:
-Both scripts built in Module 2 (base code) and module 3 (refactored code) presented with the same output, derriving input data fron the following  [dataset](VBA_Challenge.xlsm). Output was returned within a seprate worksheet titled **"All_Stock_Analysis"** presenting a table with three individual columns, each column referencing a different statistic (Ticker name, Total Daily Volume, and Yearly return) for the unique ticker that they relate to. The only diffenerce, that we shall delve into the specifics of a little later down this README, being the overall efficiency in run time of the executon of each block of code.
+Both scripts built in Module 2 (base code) and module 3 (refactored code) presented with the same output, derriving input data fron the following  [dataset](VBA_Challenge.xlsm) under datasheets 2017 and 2018. Output was returned within a seprate worksheet titled **"All_Stock_Analysis"** presenting a table with three individual columns, each column referencing a different statistic (Ticker name, Total Daily Volume, and Yearly return) for the unique ticker that they relate to. The only diffenerce, that we shall delve into the specifics of a little later down this README, being the overall efficiency in run time of the executon of each block of code.
 
 ### Ticker:
 Column A holds our ticker array `Dim tickers(12) As String` holding 12 elements - one element for each of the twelve tickers being examined. Creating a  ariable called `tickerIndex` allows us to recall and access array indexes as well as returning the specified values in their allocated location under the **"All_Stock_Analysis"** worksheet. 
