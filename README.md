@@ -99,8 +99,8 @@ Code before refactoring (Module 1). |  Code after refactoring (Module 2).
 Code with nested loops(click to enlarge).  | Code without nested loops creating multiple loops (click to enlarge).	
 ![code before refactoring](Graphics/CodeNestedLoop.PNG) | ![code after refactoring](Graphics/CodeRefactored.PNG)
 The code in a nested loop is switching back and forth between worksheets. | Code stays in the same loop, gathers all data and stores it in arrays. In a separate for loop the results are populated in the selected worksheet.  
- Execution time of the code: |  Execution time of the code:
-![](Resources/VBA_Challenge_2018.PNG) | ![](Resources/VBA_Challenge_2018_Ref.PNG)
+ Execution time of the base code: |  Execution time of the refactored code:
+![](resources/2018_base.png) | ![](resources/VBA_Challenge_2018.png)
 
 <p align="center">
 :heavy_check_mark: The refactored code runs almost 5x faster.
