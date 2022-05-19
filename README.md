@@ -13,7 +13,7 @@ For your reference, within the [VBA_Challenge file](VBA_Challenge.xlsm) you can 
 The final outcome of this data analysis pertains to Steve determining whether certain green-energy stocks are viable investments for his parents.
 
 Quite specifically, they are looking to invest in DAQO stocks (Ticker: DQ).
-This company makes silicon wafers for solar panels. Therefore, Steve is performing an overall analysis of green energy stock companies to gauge their performance over 2 years compared to the one's his parents are interested in so that they may make an informed decision.
+According to Bloomberg: “Daqo New Energy Corporation manufactures polysilicon. The Company markets its polysilicon to photovoltaic product manufacturers who process it into ingots, wafers, cells and modules for solar power products.” (https://www.bloomberg.com/quote/DQ:US)
 
 ## Building the code and Table Outputs:
 Both scripts built in Module 2 (base code) and module 3 (refactored code) presented with the same output, derriving input data fron the following  [dataset](VBA_Challenge.xlsm) under datasheets 2017 and 2018. Output was returned within a seprate worksheet titled **"All_Stock_Analysis"** presenting a table with three individual columns, each column referencing a different statistic (Ticker name, Total Daily Volume, and Yearly return) for the unique ticker that they relate to. The only diffenerce, that we shall delve into the specifics of a little later down this README, being the overall efficiency in run time of the executon of each block of code.
