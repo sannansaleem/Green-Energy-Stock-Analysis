@@ -40,10 +40,11 @@ If Cells(i, 1).Value = ticker And Cells(i + 1, 1).Value <> ticker Then
             
 End If
 ```
-As before, the variable `tickerIndex` helps us find the starting and ending point of an old/new ticker in the dataset. Arrays `Dim tickerStartingPrices(12) As Single` and `Dim tickerEndingPrices(12) As Single` store captured values.
-In “human” language we would read the following code something like this: 
+`tickerIndex` helps us initalze the start/end points of our loop referencing hte array of 12 previously created whereas `Dim tickerStartingPrices(12) As Single` and `Dim tickerEndingPrices(12) As Single` are variables created to store numerical values that will be called upon at a later time in our formulae to ouput the necessary results.
 
->If the cell value in previous row (2nd column) is not the same as current cell value (2nd column), (that means the ticker index has reached a starting point of the new ticker), then capture the value for starting price of a new ticker in a current row (7th column) and store it in a “container” named tickerEndingPrices under label “current” tickerIndex. And similarly for ending prices.
+> Our first conditinal statemnet checks if the current row is the first row with the selected tickerIndex, this idicates the starting point of the loop.
+> Our second conditional statemtn checks if the current row is the last row with the selected tickerIndex, this idicates the ending point of the loop.
+
 
 #### For loops
 The refacorisation of our VBA code heavily depended on the basic understanding of for loops. As these loops are responsible for executing the code in a repetitive manner, in out case, increasing our tickerIndex variable by 1  `tickerIndex = tickerIndex + 1` i.e. moving up to our next ticker within the array of 12 that was previously created 
