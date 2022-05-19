@@ -51,26 +51,45 @@ Incrementing a variable by 1  `tickerIndex = tickerIndex + 1` is  responsible to
 By initializing arrays `tickerVolumes(tickerIndex) = 0` we reset the total volume to zero, before entering the loop again. 
 
 #### Formatting 
-In order to present our final table in an organized and visually engaging manner 
+In order to present our final table in an organized and visually engaging manner, Microsoft Visual Basic Editor allows for both conditional as well as Static formatting as one would normally do within excel itself. 
 
-In order to make the final table (output) organized and visually pleasing, the code also contain formatting syntax.
-Here is an example of static formatting:
+Examples of sytax and various forms of user available formatting can be found [over here](https://www.excelhowto.com/macros/formatting-a-range-of-cells-in-excel-vba/). For reference purposes I have included below lines of formatting that can be visible within the code I built:
 
 ```
-Range("A1").Font.Italic = True
-Cells(1, 1).Font.Size = 14
-Range("B4").NumberFormat = "#,##0"
-```
-All formating that is possible in Excel, we can execute in VBA as well. By selecting a cell `Cells(1, 1)` or a range `Range("A3:C3")` we define where we want to apply formatting. There are plenty of useful sites online like [this](https://www.excelhowto.com/macros/formatting-a-range-of-cells-in-excel-vba/) where we can find clear formatting instructions. 
+'makes headers Bold
+    Range("A3:C3").Font.FontStyle = "Bold"
+    
+'Adds a border
+    Range("A3:C3").Borders(xlEdgeBottom).LineStyle = xlContinuous
+    
+'Formats cells B4/C4 -> B15/C15 in numerical format respectively
+    Range("B4:B15").NumberFormat = "#,##0"
+    Range("C4:C15").NumberFormat = "0.0%"
 
-Here is an example of conditional formatting.
+'Auto fits all contents of any cell found in Column B
+    Columns("B").AutoFit
 ```
- If Cells(i, 3) > 0 Then 'set a condition
-    Cells(i, 3).Interior.Color = vbGreen 'color cell green
-                 …
-End If
+
+An example of conditional formatting:
 ```
-By applying conditionals or `if statements` we can set conditions when and where formatting changes should be executed or not.
+dataRowStart = 4
+    dataRowEnd = 15
+
+    For i = dataRowStart To dataRowEnd
+        
+        If Cells(i, 3) > 0 Then
+            
+            Cells(i, 3).Interior.Color = vbGreen
+            
+        Else
+        
+            Cells(i, 3).Interior.Color = vbRed
+            
+        End If
+        
+    Next i
+```
+By applying conditionals we can set the circumsatnce in which the foramtting is applied i.e. in our example above should the cells contents be greater than 0, it wis colored in green otherwise it is colored in red.
 
 ### Code comparison
 Table below shows main diferences between code *before refactoring* and code *after refactoring* and their *run-time*. 
