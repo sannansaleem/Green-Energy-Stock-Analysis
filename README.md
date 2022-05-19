@@ -96,14 +96,14 @@ Table below shows main diferences between code *before refactoring* and code *af
 
 Code before refactoring (Module 1). |  Code after refactoring (Module 2).
 :------------------------------------------:| :-------------------------------------:
-Code with nested loops(click to enlarge).  | Code without nested loops creating multiple loops (click to enlarge).	
-![code before refactoring](Graphics/CodeNestedLoop.PNG) | ![code after refactoring](Graphics/CodeRefactored.PNG)
-The code in a nested loop is switching back and forth between worksheets. | Code stays in the same loop, gathers all data and stores it in arrays. In a separate for loop the results are populated in the selected worksheet.  
+Code with nested loops(click to enlarge).  | Code without nested loops (click to enlarge).	
+![code before refactoring](resources/base_code.png) | ![code after refactoring](resources/refactored_code.png)
+The code utlizing nested loops causes back and forth switching within worksheets eating up valuable time. | Code staying within the same loop, gathers all data and stores it in arrays where then a separate for loop the results are populated in the selected worksheet making effecient use of "batch processing' to save time.  
  Execution time of the base code: |  Execution time of the refactored code:
 <img src="resources/2017_base.png" width="1000" height=""> | <img src="resources/VBA_Challenge_2017.png" width="1000" height="">
 
 <p align="center">
-:heavy_check_mark: The refactored code runs almost 5x faster.
+:heavy_check_mark: The refactored code runs more than 5 times faster (5.33 to be precise).
 </p>
 
 ## Comparison and Analysis of  green energy stocks - 2017 vs 2018
