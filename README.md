@@ -51,6 +51,8 @@ Incrementing a variable by 1  `tickerIndex = tickerIndex + 1` is  responsible to
 By initializing arrays `tickerVolumes(tickerIndex) = 0` we reset the total volume to zero, before entering the loop again. 
 
 #### Formatting 
+In order to present our final table in an organized and visually engaging manner 
+
 In order to make the final table (output) organized and visually pleasing, the code also contain formatting syntax.
 Here is an example of static formatting:
 
