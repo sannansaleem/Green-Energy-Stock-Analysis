@@ -7,7 +7,7 @@ For this purpose, I used for loops, conditional formatting and statements amongs
 
 I enjoyed coding in VBA immensely, owing to the ease in transfer of basic to advanced repetitive tasks. I was and am able to come back to the original or updated file in order to improve it as per my convenience at any point in time. Since, it is a standalone application - I have not had to further install any libraries / packages or applications to either update current code or run further data analysis, and it has proceeded to integrate effectively with Microsoft applications.
 
-For your reference, within the VBA_Challenge file you can find the base code (Module 2) and the refactored code. (Module 3)
+For your reference, within the [VBA_Challenge](VBA_Challenge.xlsm)file you can find the base code (Module 2) and the refactored code. (Module 3)
 
 ### Purpose
 The final outcome of this data analysis pertains to Steve determining whether certain green-energy stocks are viable investments for his parents.
