@@ -55,7 +55,7 @@ In order to present our final table in an organized and visually engaging manner
 
 Examples of sytax and various forms of user available formatting can be found [over here](https://www.excelhowto.com/macros/formatting-a-range-of-cells-in-excel-vba/). For reference purposes I have included below lines of formatting that can be visible within the code I built:
 
-```
+`
 'makes headers Bold
     Range("A3:C3").Font.FontStyle = "Bold"
     
@@ -68,10 +68,10 @@ Examples of sytax and various forms of user available formatting can be found [o
 
 'Auto fits all contents of any cell found in Column B
     Columns("B").AutoFit
-```
+`
 
 An example of conditional formatting:
-```
+`
 dataRowStart = 4
     dataRowEnd = 15
 
@@ -88,10 +88,10 @@ dataRowStart = 4
         End If
         
     Next i
-```
-By applying conditionals we can set the circumsatnce in which the foramtting is applied i.e. in our example above should the cells contents be greater than 0, it wis colored in green otherwise it is colored in red.
+`
+By applying conditionals we can set the circumsatnce in which the foramtting is applied i.e. in our example above should the cells contents be greater than 0, it is colored in green otherwise it is colored in red.
 
-### Code comparison
+### Comparison after refacotring
 Table below shows main diferences between code *before refactoring* and code *after refactoring* and their *run-time*. 
 
 Code before refactoring (Module 1). |  Code after refactoring (Module 2).
