@@ -87,10 +87,9 @@ The code in a nested loop is switching back and forth between worksheets. | Code
 
 ## Comparison and Analysis of  green energy stocks - 2017 vs 2018
 (Figure 1) | (Figure 2)
-:------------------------------------------:| :-------------------------------------:
-All stocks Result 2017 (click to enlarge).  | All stocks Result 2018 (click to enlarge).	
+:------------------------------------------:| :-------------------------------------:	
 ![](resources/2017_table_analysis.png) | ![](resources/2018_table_analysis.png)
-Insert caption. | Insert Caption.  
+All stocks Result 2017 (click to enlarge).  | All stocks Result 2018 (click to enlarge).
 
 ### Annual Returns (%)
 The table shown in Fig. 1 and Fig. 2 have columns that refer to each of the 12 company’s ticker name, Total daily volume (for the given year) and Returns (Annual in Percentage).
