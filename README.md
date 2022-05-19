@@ -89,7 +89,7 @@ The code in a nested loop is switching back and forth between worksheets. | Code
 (Figure 1) | (Figure 2)
 :------------------------------------------:| :-------------------------------------:
 All stocks Result 2017 (click to enlarge).  | All stocks Result 2018 (click to enlarge).	
-![](resources/2017_table_analysis.png) | ![](resources/2017_table_analysis.png)
+![](resources/2017_table_analysis.png) | ![](resources/2018_table_analysis.png)
 Insert caption. | Insert Caption.  
 
 ### Annual Returns (%)
