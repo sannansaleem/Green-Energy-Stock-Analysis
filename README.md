@@ -158,6 +158,6 @@ The following are real life disadvantages, or rather limitations owing to the re
 
 - I enjoyed refactoring the code since while slightly frustrating initially, in retrospect it ended up with me having a much higher quality improved code with a run-time more than 5 times faster than the original code.
 
--I was able to understand and deeply delve into the logic of the code as I played with the loops and operators to improve said logic.
+- I was able to understand and deeply delve into the logic of the code as I played with the loops and operators to improve said logic.
 
 - I cannot overlook the fact that I was able to accomplish this because of the initially well written and clearly documented code. Practically speaking, one cannot improve ‘older’ code whether ones’ own or another’s without understanding it and can ultimately end up with errors and bugs (as did I initially but that was in part due to this being one of the first times I used VBA)
