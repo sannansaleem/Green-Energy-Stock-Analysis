@@ -16,19 +16,19 @@ Quite specifically, they are looking to invest in DAQO stocks (Ticker: DQ).
 According to Bloomberg: “Daqo New Energy Corporation manufactures polysilicon. The Company markets its polysilicon to photovoltaic product manufacturers who process it into ingots, wafers, cells and modules for solar power products.” (https://www.bloomberg.com/quote/DQ:US)
 
 ## Building the code and Table Outputs:
-Both scripts built in Module 2 (base code) and module 3 (refactored code) presented with the same output, derriving input data fron the following  [dataset](VBA_Challenge.xlsm) under datasheets 2017 and 2018. Output was returned within a seprate worksheet titled **"All_Stock_Analysis"** presenting a table with three individual columns, each column referencing a different statistic (Ticker name, Total Daily Volume, and Yearly return) for the unique ticker that they relate to. The only diffenerce, that we shall delve into the specifics of a little later down this README, being the overall efficiency in run time of the executon of each block of code.
+Both scripts built in Module 2 (base code) and module 3 (refactored code) presented with the same output, deriving input data from the following  [dataset](VBA_Challenge.xlsm) under datasheets 2017 and 2018. Output was returned within a seperate worksheet titled **"All_Stock_Analysis"** presenting a table with three individual columns, each column referencing a different statistic (Ticker name, Total Daily Volume, and Yearly return) for the unique ticker that they relate to. The only difference, that we shall delve into the specifics of a little later down this README, being the overall efficiency in run time of the executon of each block of code.
 
 ### <ins>Ticker</ins>:
-Column A holds our ticker array `Dim tickers(12) As String` holding 12 elements - one element for each of the twelve tickers being examined. Creating a  ariable called `tickerIndex` allows us to recall and access array indexes as well as returning the specified values in their allocated location under the **"All_Stock_Analysis"** worksheet. 
+Column A holds our ticker array `Dim tickers(12) As String` holding 12 elements - one element for each of the twelve tickers being examined. Creating a  variable called `tickerIndex` allows us to recall and access array indexes as well as returning the specified values in their allocated location under the **"All_Stock_Analysis"** worksheet. 
 
 ###  <ins>Total Daily Volume</ins>:
-In order to code the output for Total Daily Volume, we firstly had to specify an equation `tickerVolumes(tickerIndex) + Cells(i, 9).Value` that would allow for the calulation to be completed at least once for a single ticker before telling our script to loop it through the 11 remaining. by creating an array called tickerVolumes `Dim tickerVolumes(12) As Long`, we were consequently abke to use the previously created variable `tickerIndex` to properly store correct values for each ticker within the table.
+In order to code the output for Total Daily Volume, we firstly had to specify an equation `tickerVolumes(tickerIndex) + Cells(i, 9).Value` that would allow for the calulation to be completed at least once for a single ticker before telling our script to loop it through the 11 remaining. by creating an array called tickerVolumes `Dim tickerVolumes(12) As Long`, we were consequently able to use the previously created variable `tickerIndex` to properly store correct values for each ticker within the table.
 
-Reulting in our final line looking like `tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 9).Value`
+Resulting in our final line looking like `tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 9).Value`
 
 ### <ins> Yearly Return</ins>:
 
-In order to code for **Yearly Return** the use of conditional (If-Then) statemnets had to be employed
+In order to code for **Yearly Return** the use of conditional (If-Then) statements had to be employed
 ```
 If Cells(i - 1, 1).Value <> ticker And Cells(i, 1) = ticker Then
             tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
@@ -47,7 +47,7 @@ End If
 
 
 #### For loops
-The refacorisation of our VBA code heavily depended on the basic understanding of for loops. As these loops are responsible for executing the code in a repetitive manner, in out case, increasing our tickerIndex variable by 1  `tickerIndex = tickerIndex + 1` i.e. moving up to our next ticker within the array of 12 that was previously created 
+The refactorization of our VBA code heavily depended on the basic understanding of for loops. As these loops are responsible for executing the code in a repetitive manner, in our case, increasing our tickerIndex variable by 1  `tickerIndex = tickerIndex + 1` i.e. moving up to our next ticker within the array of 12 that was previously created.
 
 By initializing arrays `tickerVolumes(tickerIndex) = 0` we are able to set the intial volume to zero, before entering the loop again. As we will further explore in the coming sections nested for loops as presented in our base code were the source of inefficiencies. 
 
@@ -91,16 +91,16 @@ dataRowStart = 4
         
     Next i
 ```
-By applying conditionals we can set the circumsatnce in which the foramtting is applied i.e. in our example above should the cells contents be greater than 0, it is colored in green otherwise it is colored in red.
+By applying conditionals we can set the circumsatance in which the formatting is applied i.e. in our example above should the cells contents be greater than 0, it is colored in green otherwise it is colored in red.
 
-### <ins>Comparison after refacotring</ins>
-Table below shows main diferences between code *before refactoring* and code *after refactoring* as well as their *run-time*. 
+### <ins>Comparison after refactoring</ins>
+Table below shows main differences between code *before refactoring* and code *after refactoring* as well as their *run-time*. 
 
 Code before refactoring (Module 1). |  Code after refactoring (Module 2).
 :------------------------------------------:| :-------------------------------------:
 Code with nested loops(click to enlarge).  | Code without nested loops (click to enlarge).	
 ![code before refactoring](resources/base_code.png) | ![code after refactoring](resources/refactored_code.png)
-The code utlizing nested loops causes back and forth switching within worksheets eating up valuable time. | Code staying within the same loop, gathers all data and stores it in arrays where then a separate for loop the results are populated in the selected worksheet making effecient use of "batch processing' to save time.  
+The code utilizing nested loops causes back and forth switching within worksheets eating up valuable time. | Code staying within the same loop, gathers all data and stores it in arrays where then a separate for loop the results are populated in the selected worksheet making efficient use of "batch processing' to save time.  
  Execution time of the base code: |  Execution time of the refactored code:
 <img src="resources/2017_base.png" width="400" height="350"> | <img src="resources/VBA_Challenge_2017.png" width="400" height="350">
 
@@ -115,7 +115,7 @@ The code utlizing nested loops causes back and forth switching within worksheets
 All stocks Result 2017 (click to enlarge).  | All stocks Result 2018 (click to enlarge).
 
 ### <ins>Annual Returns (%)</ins>
-The table shown in Fig. 1 and Fig. 2 have columns that refer to each of the 12 company’s ticker name, Total daily volume (for the given year) and Returns (Annual in Percentage).
+The tables shown in Fig. 1 and Fig. 2 have columns that refer to each of the 12 company’s ticker name, Total daily volume (for the given year) and Returns (Annual in Percentage).
 
 Fig.1 i.e. for the year 2017 shows positive returns for all but 1 of the 12 companies and can be quite deceiving since Fig.2 shows that the companies unanimously had negative returns.
 
@@ -152,7 +152,7 @@ The following are real life disadvantages, or rather limitations owing to the re
 
 - Refactoring already running code may lead to new errors or bugs creeping into the code and therefore increase time consumed with now debugging it.
 
-- When refactoring someone else’s’ code one cannot always ensure prior proper documentation which may lead to time taken to understand it before refactoring it and even then may not allow for the improvement in the best possible way.
+- When refactoring someone else’s code one cannot always ensure prior proper documentation which may lead to time taken to understand it before refactoring it and even then may not allow for the improvement in the best possible way.
 
 ### <ins>How do these pros and cons apply to refactoring the original VBA script</ins>?
 
