@@ -153,3 +153,11 @@ The following are real life disadvantages, or rather limitations owing to the re
 - Refactoring already running code may lead to new errors or bugs creeping into the code and therefore increase time consumed with now debugging it.
 
 - When refactoring someone else’s’ code one cannot always ensure prior proper documentation which may lead to time taken to understand it before refactoring it and even then may not allow for the improvement in the best possible way.
+
+### <ins>How do these pros and cons apply to refactoring the original VBA script</ins>?
+
+- I enjoyed refactoring the code since while slightly frustrating initially, in retrospect it ended up with me having a much higher quality improved code with a run-time more than 5 times faster than the original code.
+
+-I was able to understand and deeply delve into the logic of the code as I played with the loops and operators to improve said logic.
+
+- I cannot overlook the fact that I was able to accomplish this because of the initially well written and clearly documented code. Practically speaking, one cannot improve ‘older’ code whether ones’ own or another’s without understanding it and can ultimately end up with errors and bugs (as did I initially but that was in part due to this being one of the first times I used VBA)
