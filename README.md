@@ -102,7 +102,7 @@ Code with nested loops(click to enlarge).  | Code without nested loops (click to
 ![code before refactoring](resources/base_code.png) | ![code after refactoring](resources/refactored_code.png)
 The code utilizing nested loops causes back and forth switching within worksheets eating up valuable time. | Code staying within the same loop, gathers all data and stores it in arrays where then a separate for loop the results are populated in the selected worksheet making efficient use of "batch processing' to save time.  
  Execution time of the base code: |  Execution time of the refactored code:
-<img src="resources/2017_base.png" width="400" height="350"> | <img src="resources/VBA_Challenge_2017.png" width="400" height="350">
+<img src="resources/2017_base.png" width="400" height=""> | <img src="resources/VBA_Challenge_2017.png" width="400" height="">
 
 <p align="center">
 :heavy_check_mark: The refactored code runs more than 5 times faster (5.33 to be precise).
